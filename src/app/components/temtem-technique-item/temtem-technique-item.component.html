@@ -1,0 +1,20 @@
+<mat-accordion>
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <app-temtem-technique-priority-painter
+        [type]="data.technique.type"
+        [hold]="data.technique.hold"
+      ></app-temtem-technique-priority-painter>
+      <mat-panel-title style="z-index: 10000">
+        {{ data.technique.name }}
+      </mat-panel-title>
+      <app-temtem-technique-damage
+        [damage]="data.technique.damage"
+      ></app-temtem-technique-damage>
+    </mat-expansion-panel-header>
+    <div
+      [innerHTML]="data?.technique?.description"
+      style="padding-top: 10px"
+    ></div>
+  </mat-expansion-panel>
+</mat-accordion>

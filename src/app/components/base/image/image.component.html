@@ -1,0 +1,16 @@
+<img
+  [src]="url"
+  [width]="width"
+  [height]="height"
+  *ngIf="width > 0 && height > 0"
+  alt=""
+/>
+
+<img [src]="url" *ngIf="width == 0 || height == 0" alt="" />
+
+<img
+  [src]="url"
+  style="width: 100%; height: 100%"
+  *ngIf="width < 0 || height < 0"
+  alt=""
+/>

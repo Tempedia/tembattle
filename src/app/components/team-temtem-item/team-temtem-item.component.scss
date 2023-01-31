@@ -1,0 +1,58 @@
+@use "@angular/material" as mat;
+
+:host {
+  display: block;
+  padding: 10px;
+
+  mat-card {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    user-select: none;
+    max-width: 320px;
+    min-width: 260px;
+    @include mat.elevation-transition();
+    @include mat.elevation(2);
+    &:hover {
+      @include mat.elevation(8);
+    }
+    mat-card-content {
+      padding: 15px;
+      position: relative;
+      app-temtem-portrait {
+        width: 100%;
+        // max-width: 250px;
+      }
+      h1.name {
+        text-align: center;
+        span.no {
+          color: grey;
+        }
+      }
+      div.type {
+        text-align: center;
+      }
+      div.gender {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        mat-icon {
+          font-size: 3em;
+          width: auto;
+          height: auto;
+          &.male {
+            color: #2986cc;
+          }
+          &.female {
+            color: #c90076;
+          }
+        }
+      }
+
+      mat-divider {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

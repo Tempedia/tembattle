@@ -1,0 +1,14 @@
+:host {
+  span {
+    display: inline-block;
+    background-color: #1acfd1;
+    border-radius: 40px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    // -webkit-text-stroke: 1px #0c0c0c;
+    text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
+      1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
+  }
+}

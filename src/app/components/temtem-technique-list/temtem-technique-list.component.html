@@ -1,0 +1,17 @@
+<mat-accordion>
+  <mat-expansion-panel hideToggle *ngFor="let data of techniques">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ data.technique.name }}
+      </mat-panel-title>
+      <app-temtem-technique-priority-painter
+        [type]="data.technique.type"
+        [hold]="data.technique.hold"
+      ></app-temtem-technique-priority-painter>
+      <app-temtem-technique-damage
+        [damage]="data.technique.damage"
+      ></app-temtem-technique-damage>
+    </mat-expansion-panel-header>
+    <p [innerHTML]="data?.technique?.description" style="margin-top: 4px"></p>
+  </mat-expansion-panel>
+</mat-accordion>

@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  padding: 20px;
+  div.team {
+    // max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    h1.name {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    div.temtems {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      app-team-temtem-item {
+        flex: 1;
+      }
+    }
+  }
+}

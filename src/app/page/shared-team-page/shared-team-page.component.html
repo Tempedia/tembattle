@@ -1,0 +1,13 @@
+<div class="team" *ngIf="data">
+  <h1 class="name">{{ data.name }}</h1>
+
+  <div class="temtems" fxLayout="row wrap" fxLayoutAlign="space-around">
+    <!-- <div fxFlex="33%" *ngFor="let temtem of data.temtems"> -->
+    <app-team-temtem-item
+      fxFlex
+      *ngFor="let temtem of data.temtems"
+      [data]="temtem"
+    ></app-team-temtem-item>
+    <!-- </div> -->
+  </div>
+</div>

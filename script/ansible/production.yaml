@@ -1,0 +1,18 @@
+- hosts: localhost
+  tasks:
+    - name: build tembattle
+      command: "{{item}}"
+      with_items:
+        - git checkout main
+        - ng build --configuration production
+      args:
+        chdir: "{{playbook_dir}}/../.."
+- hosts: tempedia.wikylyu.xyz
+  user: wiky
+  tasks:
+    - name: deploy tembattle
+      synchronize:
+        src: "{{playbook_dir}}/../../dist/tembattle/"
+        dest: /home/wiky/run/tembattle/
+        #rsync_opts:
+        #  - "--exclude=assets/"

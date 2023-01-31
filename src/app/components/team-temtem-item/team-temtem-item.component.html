@@ -1,0 +1,41 @@
+<mat-card>
+  <mat-card-content>
+    <app-temtem-portrait
+      [icon]="data.temtem.icon"
+      [lumaIcon]="data.temtem.luma_icon"
+      [luma]="data.luma"
+    ></app-temtem-portrait>
+    <h1 class="name">
+      {{ data.temtem.name }}
+      <span class="no">#{{ data.temtem.no }}</span>
+    </h1>
+    <div class="gender">
+      <mat-icon *ngIf="data.gender === 'male'" class="male">male</mat-icon>
+      <mat-icon *ngIf="data.gender === 'female'" class="female">
+        female</mat-icon
+      >
+    </div>
+    <div class="type">
+      <app-temtem-type-icon
+        *ngFor="let type of data.temtem.type"
+        [type]="type"
+        [size]="48"
+      ></app-temtem-type-icon>
+    </div>
+    <!-- <mat-divider></mat-divider> -->
+    <div class="trait">
+      <app-temtem-trait-label [trait]="data.trait"></app-temtem-trait-label>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="technique">
+      <app-temtem-technique-item
+        *ngFor="let t of data.techniques"
+        [data]="t"
+        style="margin-bottom: 10px"
+      ></app-temtem-technique-item>
+      <!-- <app-temtem-technique-list
+        [techniques]="data.techniques"
+      ></app-temtem-technique-list> -->
+    </div>
+  </mat-card-content>
+</mat-card>
