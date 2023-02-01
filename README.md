@@ -1,6 +1,9 @@
 # Tembattle
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
+**Tembattle** is a Angular project, used to serve user team page.
+
+When user create a Temtem team in Tempedia APP and share it, a share link like [this](https://tempedia.wikylyu.xyz/shared/team/bafd95d7-ec32-493b-a1d0-6becba28fd17) wiil be generated. And user can share it with other people.
+
 
 ## Development server
 
